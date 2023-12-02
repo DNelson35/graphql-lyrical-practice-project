@@ -8,7 +8,6 @@ require('dotenv').config()
 
 const app = express();
 
-// Replace with your Mongo Atlas URI
 const MONGO_URI = process.env.DB;
 if (!MONGO_URI) {
   throw new Error('You must provide a Mongo Atlas URI');
