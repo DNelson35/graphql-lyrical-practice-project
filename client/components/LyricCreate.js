@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
+import query from '../queries/FetchSong'
 
  class LyricCreate extends Component {
 
@@ -17,7 +18,8 @@ import { graphql } from 'react-apollo'
                 content: this.state.content,
                 songId: this.props.songId
             }
-        }).then(() => this.setState({ content: '' }))
+        })
+        .then(() => this.setState({ content: '' }))
     }
 
   render() {
